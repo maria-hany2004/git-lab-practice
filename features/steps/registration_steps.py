@@ -42,3 +42,11 @@ def step_refused(context, text):
 def step_result(context, result):
     actual = "refused" if context.error else "accepted"
     assert actual == result, actual
+
+
+@when('the student drops "{code}"')
+def step_drop(context, code):
+    try:
+        context.student.drop(code)
+    except RegistrationError as e:
+        context.error = str(e)
