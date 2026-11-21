@@ -20,6 +20,8 @@ class InternationalPolicy:
 
 
 class SiblingPolicy:
+    """Regular fee with a 10% sibling discount."""
+
     DISCOUNT = 0.10
 
     def fee(self, hours):
