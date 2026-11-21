@@ -16,6 +16,7 @@ def student():
     ("regular", 7200),
     ("scholarship", 3600),
     ("international", 17000),
+    ("sibling", 6480),
 ])
 def test_invoice_total(student, kind, expected, tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
